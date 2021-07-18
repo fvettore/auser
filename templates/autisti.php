@@ -123,7 +123,7 @@ $( document ).ready(function() {
     
     $("button.btn-warning").click(function(){
         var btn = $(this).attr("id").substr(4);
-        var URL="./autisti/"+btn;
+        var URL="./autisti_servizi/"+btn;
         location.assign(URL);
     });
     

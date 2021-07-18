@@ -12,6 +12,8 @@ elseif($pagina->template==='servizi'){
 elseif($pagina->template==='autisti'){
         include "./templates/autisti.php";
 }
-
+elseif($pagina->template==='autisti_servizi'){
+        include "./templates/autisti_servizi.php";
+}
 
 
