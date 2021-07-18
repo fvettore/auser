@@ -16,22 +16,17 @@ $query="select * from servizi where disabilitato <>1 order by codice";
 
 $res=$db->query($query);
 while ($l=$res->fetch_array()){
-    
     $idservizi=$l['idservizi'];
     $codice=$l['codice'];
     $descrizione=$l['descrizione'];
     $colore=$l['colore'];
     echo "<tr id=\"tr$idservizi\">\n";    
-    //echo "    <td>$codice</td>\n";
     echo "    <td><input class=\"form-control\" id=\"codice_$idservizi\" value=\"$codice\"></input></td>\n";
-    //echo "    <td>$descrizione</td>\n";
     echo "    <td><input class=\"form-control\" id=\"descrizione_$idservizi\" value=\"$descrizione\"></input></td>\n";
-    //echo "    <td>$targa</td>\n";
     echo "    <td><input class=\"form-control\" id=\"colore_$idservizi\" value=\"$colore\"></input></td>\n";
     echo "<td id=\"col_$idservizi\" style=\"background-color: #$colore\">&nbsp</td>\n";
     echo "    <td><button id=\"DEL$idservizi\" type=\"button\" class=\"btn btn-danger\"><b>🗑</b></button></td>\n";
     echo "</tr>";
-    
 }
 ?>
   <tr>
@@ -54,8 +49,7 @@ $( document ).ready(function() {
                     $('#tr'+btn).hide();
                 }
             });
-        }
-        
+        }        
     });
     
      $("button.btn-success").click(function(){
@@ -73,10 +67,8 @@ $( document ).ready(function() {
     });
     
     $("input.form-control").change(function(){
-        if($(this).attr("id").indexOf("_")>0){
-            //alert($(this).attr("id"));
+        if($(this).attr("id").indexOf("_")>0){//patch per evitare problemi con box inser
             var btn=$(this).attr("id");
-
             var splitvalues=btn.split("_");
             var valore=$(this).val();
             var campo=splitvalues[0];
