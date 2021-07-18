@@ -1,5 +1,6 @@
 <?php
-
+//GLI UNICI ASINCRONI ACCETTATI SONO QUESTI
+//(si poteva includere automaticamente, ma è meglio stare sul sicuro)
 if($pagina->parametri[0]=='elimina_mezzo'){
     include "./asincroni/elimina_mezzo.php";
 }

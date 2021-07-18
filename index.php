@@ -9,6 +9,6 @@ if($pagina->template==='asincroni'){
 }
 else {
     include "header.php";
-    include "body.php";
+    include "body.php";//a sua volta includerà un template
     include "footer.php";
 }

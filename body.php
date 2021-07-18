@@ -1,4 +1,5 @@
 <?php
+//SOLO QUESTI TEMPLATE SONO AUTORIZZATI E INCLUSI
 if($pagina->template===''){
     include "./templates/home.php";
 }
