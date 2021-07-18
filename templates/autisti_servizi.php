@@ -9,17 +9,17 @@ $l=$res->fetch_array();
 $nome=$l['nome'];
 $cognome=$l['cognome'];
 ?>
-    <a href="<?=SITE_URL?>">&lt;-HOME</a>&lt;-<a href="<?=SITE_URL."/autisti"?>">AUTISTI</a>
-    <h3>Assegnazione servizi autista <?="$cognome $nome"?></h3>
+<a href="<?=SITE_URL?>">&lt;-HOME</a>&lt;-<a href="<?=SITE_URL."/autisti"?>">AUTISTI</a>
+<h3>Assegnazione servizi autista <?="$cognome $nome"?></h3>
     
-    <table class="table table-striped">
- <thead>
+<table class="table table-striped">
+    <thead>
       <tr>
         <th>codice</th>
         <th>descrizione</th>
         <th>abilitato</th>
        </tr>
-  </thead>
+    </thead>
     
 <?php
 $query="select * from auser.servizi where disabilitato <>1 order by codice";
